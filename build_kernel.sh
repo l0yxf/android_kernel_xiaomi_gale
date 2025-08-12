@@ -6,8 +6,8 @@ sudo apt-get install gcc-aarch64-linux-gnu bc -y
 set -e
 
 KERNEL_DIR="$(pwd)"
-CHAT_ID="7898438749"
-TOKEN="8188281304:AAGd1EB1FqT4NQjOgS7p4IfPyjYRXjHvIMw"
+CHAT_ID="6118418604"
+TOKEN="7207801315:AAHLhevoBuv8Ph8SPRj4vyjK0JMBKzJo-3o"
 DEVICE="gale"
 KERVER=$(make -s kernelversion | tr -d '[:space:]')
 VERSION=v1
