@@ -41,7 +41,6 @@ elif [ "$COMPILER" = "aosp" ]; then
 fi
 
 git clone --depth=1 https://github.com/l0yxf/AnyKernel3.git AnyKernel3
-rm -rf AnyKernel3/{.git,.github,LICENSE,README.md}
 
 KBUILD_BUILD_HOST="l0yxf"
 KBUILD_BUILD_USER="Celestial"
