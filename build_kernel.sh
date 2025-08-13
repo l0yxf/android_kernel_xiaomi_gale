@@ -7,7 +7,7 @@ set -e
 
 KERNEL_DIR="$(pwd)"
 CHAT_ID="6118418604"
-TOKEN="telegram_bot_token"
+TOKEN="$TELEGRAM_TOKEN"
 DEVICE="gale"
 KERVER=$(make -s kernelversion | tr -d '[:space:]')
 VERSION=v1
