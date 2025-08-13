@@ -40,10 +40,11 @@ elif [ "$COMPILER" = "aosp" ]; then
     PATH="${KERNEL_DIR}/gcc/bin:${KERNEL_DIR}/gcc32/bin:${PATH}"
 fi
 
-git clone https://github.com/Mohamedfullhd/AnyKernel3.git --depth=1
+git clone --depth=1 https://github.com/l0yxf/AnyKernel3.git AnyKernel3
+rm -rf AnyKernel3/{.git,.github,LICENSE,README.md}
 
-KBUILD_BUILD_HOST="LR"
-KBUILD_BUILD_USER="-4k"
+KBUILD_BUILD_HOST="l0yxf"
+KBUILD_BUILD_USER="Celestial"
 KBUILD_COMPILER_STRING=$(clang --version | head -n 1 | perl -pe 's/http.*?//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 PROCS=$(nproc --all)
 export KBUILD_COMPILER_STRING KBUILD_BUILD_USER KBUILD_BUILD_HOST PROCS
