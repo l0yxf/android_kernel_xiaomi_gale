@@ -13,7 +13,7 @@ KERVER=$(make -s kernelversion | tr -d '[:space:]')
 VERSION=v1
 DEFCONFIG="gale_defconfig"
 IMAGE=${KERNEL_DIR}/out/arch/arm64/boot/Image.gz-dtb
-ZIPNAME="aurora_kernel"
+ZIPNAME="lumia_kernel"
 TANGGAL=$(date +"%F-%H%M")
 FINAL_ZIP="${ZIPNAME}-${VERSION}-${KERVER}-${DEVICE}-${TANGGAL}.zip"
 COMPILER="llvm"
@@ -43,7 +43,7 @@ fi
 git clone --depth=1 https://github.com/l0yxf/AnyKernel3.git AnyKernel3
 
 KBUILD_BUILD_HOST="l0yxf"
-KBUILD_BUILD_USER="Celestial"
+KBUILD_BUILD_USER="Caelix"
 KBUILD_COMPILER_STRING=$(clang --version | head -n 1 | perl -pe 's/http.*?//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 PROCS=$(nproc --all)
 export KBUILD_COMPILER_STRING KBUILD_BUILD_USER KBUILD_BUILD_HOST PROCS
